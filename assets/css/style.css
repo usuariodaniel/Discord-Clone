@@ -1,0 +1,687 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Sans;
+  src: url(../fonts/OpenSans/static/OpenSans/OpenSans-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: SansNormal;
+  src: url(../fonts/OpenSans/static/OpenSans/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: Luckiest;
+  src: url(../fonts/Luckiest/LuckiestGuy-Regular.ttf);
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  max-width: 100%;
+}
+
+nav {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 auto;
+  width: 100%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+  margin-right: 5rem;
+}
+
+.left h2 {
+  font-family: "Luckiest";
+  color: #fff;
+}
+
+.left img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.3rem;
+}
+
+.center {
+  margin-right: 5rem;
+}
+
+.center ul {
+  margin: 0;
+  padding: 0;
+}
+
+.center a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.8rem;
+  font-family: "SansNormal";
+  transition: 100ms;
+}
+
+.center a:hover {
+  border-bottom: 1px solid #fff;
+}
+
+.center li {
+  padding: 1.5rem;
+  list-style: none;
+  z-index: 2;
+}
+
+.center ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 0.2rem;
+}
+
+.right {
+  z-index: 2;
+}
+
+.right a {
+  border: 1px solid #ffffff;
+  padding: 0.6rem;
+  background-color: #fff;
+  color: black;
+  text-decoration: none;
+  border-radius: 40px;
+  font-size: 0.8rem;
+  font-family: "SansNormal";
+  transition: 300ms;
+}
+
+.hidden-menu {
+  display: none;
+}
+
+.right a:hover {
+  color: #3c6cee;
+  box-shadow: -1px 2px 10px #2e2e2e;
+}
+
+.main-header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  flex-grow: 1;
+  background-image: url(../images/Header\ Background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 100%;
+  height: 40rem;
+  align-items: center;
+  z-index: 1;
+}
+
+.main-header .header-h1 {
+  align-self: center;
+  flex-wrap: wrap;
+  position: absolute;
+  text-align: center;
+  max-width: 28rem;
+  top: 150px;
+  font-size: 2rem;
+  font-family: "Luckiest";
+  line-height: 3.5rem;
+  letter-spacing: 0.3rem;
+  color: #fff;
+}
+
+.main-header .header-h2 {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+  align-self: center;
+  text-align: center;
+  max-width: 71rem;
+  flex-wrap: wrap;
+  top: 300px;
+  font-size: 1rem;
+  font-family: "SansNormal";
+  line-height: 2rem;
+  color: #fff;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  margin-top: 18rem;
+  gap: 2rem;
+  z-index: 2;
+}
+
+.btn-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+  border: 1px solid #ffffff;
+  border-radius: 40px;
+  background-color: #fff;
+  color: #000;
+  font-family: "SansNormal";
+  padding: 0.7rem 4rem;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.btn-1:hover {
+  color: #3c6cee;
+  box-shadow: -1px 2px 10px #2e2e2e;
+}
+
+.btn-1 img {
+  width: 26px;
+  height: 30px;
+}
+
+.btn-2 {
+  display: flex;
+  border: 1px solid #000000;
+  align-items: center;
+  border-radius: 40px;
+  background-color: #252525;
+  color: #ffffff;
+  font-family: "SansNormal";
+  padding: 0.7rem 3rem;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.btn-2:hover {
+  background-color: #2e2e2e;
+  box-shadow: -1px 2px 10px #2e2e2e;
+}
+.main-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  flex-direction: column;
+  margin-top: 100px;
+  max-width: 100%;
+}
+
+.main-content .section-1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.section-1 .p-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.p-content .p-1 {
+  font-size: 2.5rem;
+  width: 20rem;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: "Sans";
+  line-height: 3.375rem;
+}
+
+.p-content .p-2 {
+  font-size: 1rem;
+  width: 348px;
+  font-family: "SansNormal";
+  margin-top: 20px;
+}
+
+.main-content .section-2 {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #f6f6f6;
+  margin-top: 5rem;
+  padding: 5rem 0;
+}
+
+.section-2 .p-content-2 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.p-content-2 .p-sec {
+  font-size: 2.5rem;
+  width: 320px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: "Sans";
+  line-height: 54px;
+}
+
+.p-content-2 .p-sec2 {
+  font-size: 1rem;
+  width: 348px;
+  font-family: "SansNormal";
+  margin-top: 20px;
+}
+
+.main-content .section-3 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 5rem 0;
+}
+
+.section-3 .p-content-3 {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.p-content-3 .p-sect {
+  font-size: 2.5rem;
+  width: 320px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: "Sans";
+  line-height: 54px;
+}
+
+.p-content-3 .p-sect2 {
+  font-size: 1rem;
+  width: 348px;
+  font-family: "SansNormal";
+  margin-top: 20px;
+}
+
+.main-content .section-4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  background-color: #f6f6f6;
+  padding: 5rem 0;
+}
+
+.section-4 .sec4-text {
+  max-width: 43rem;
+  font-size: 3.5rem;
+  font-family: "Luckiest";
+  text-align: center;
+  margin: 0 auto;
+  line-height: 3rem;
+}
+
+.section-4 .sec4-p {
+  max-width: 50rem;
+  font-size: 1rem;
+  font-family: "SansNormal";
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1.5rem;
+}
+
+.section-4 img {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 55rem;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.section-4 .sec4-p2 {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 1.7rem;
+  font-family: "Sans";
+}
+
+.button-sec4 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-shrink: 1;
+  flex-wrap: wrap;
+  margin-top: 3rem;
+  z-index: 2;
+  padding-bottom: 3rem;
+}
+
+.btn-1-sec4 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+  border-radius: 40px;
+  background-color: #5865f2;
+  color: #fff;
+  font-family: "SansNormal";
+  padding: 0.8rem 2.2rem;
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.btn-1-sec4:hover {
+  background-color: #7984f5;
+  box-shadow: -1px 2px 10px #2e2e2e;
+}
+
+.btn-1-sec4 .download-img {
+  width: 26px;
+  height: 30px;
+}
+
+footer {
+  max-width: 100%;
+  background-color: #23272a;
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  background-color: #23272a;
+  justify-content: space-evenly;
+  padding: 5rem;
+}
+
+.footer-container .footer-column1 {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-container h1 {
+  font-family: "Luckiest";
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  color: #5865f2;
+  max-width: 20rem;
+}
+
+.footer-container .img-footer {
+  display: inline-block;
+  align-content: center;
+}
+
+.footer-column1 img {
+  max-width: 1.5rem;
+  margin: 0.4rem;
+}
+
+#yt {
+  position: relative;
+  top: 0.25rem;
+  max-width: 2rem;
+}
+
+.footer-container .footer-columns {
+  display: flex;
+  flex-direction: column;
+  font-family: "SansNormal";
+  color: #fff;
+  gap: 1rem;
+}
+
+.footer-container .footer-columns p span {
+  transition: 100ms;
+  cursor: pointer;
+}
+
+.footer-container .footer-columns p span:hover {
+  border-bottom: 1px solid #ffffff;
+}
+
+#first-one {
+  color: #1b2dbf;
+  font-family: "SansNormal";
+}
+
+.finalfooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-shrink: 1;
+  padding: 2rem;
+  max-width: 85rem;
+  margin: 0 auto;
+  border-top: 1px solid #5865f2;
+}
+
+.finalfooter .img-discord {
+  display: flex;
+  flex-direction: row;
+  z-index: 2;
+  margin-right: 5rem;
+}
+
+.img-discord h2 {
+  font-family: "Luckiest";
+  color: #fff;
+}
+
+.img-discord img {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.3rem;
+}
+
+.finalfooter .footer-btn {
+  font-family: "SansNormal";
+  font-size: 0.8rem;
+  color: #fff;
+  background-color: #5865f2;
+  border-radius: 40px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+}
+
+.footer-btn:hover {
+  background-color: #7984f5;
+}
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 1280px) {
+  .main-header {
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+@media screen and (max-width: 1045px) {
+  .menu {
+    display: inline;
+  }
+  .center,
+  .right {
+    display: none;
+  }
+  .hidden-menu {
+    display: flex;
+    z-index: 2;
+  }
+  .hidden-menu img {
+    margin-left: 2rem;
+    width: 2rem;
+    height: 2rem;
+  }
+  .right-hidden a {
+    border: 1px solid #ffffff;
+    padding: 0.6rem;
+    background-color: #fff;
+    color: black;
+    text-decoration: none;
+    border-radius: 40px;
+    font-size: 0.8rem;
+    font-family: "SansNormal";
+    transition: 300ms;
+    z-index: 2;
+  }
+  .right-hidden {
+    padding: 0.5rem;
+  }
+  nav {
+    padding: 1rem;
+    justify-content: space-between;
+  }
+  .main-header {
+    justify-content: left;
+    background-position: right;
+  }
+  .main-header .header-h1 {
+    text-align: left;
+    margin-left: 2rem;
+  }
+  .main-header .header-h2 {
+    text-align: left;
+    margin-left: 2rem;
+    max-width: 55rem;
+  }
+  .buttons {
+    flex-direction: column;
+    padding: 1.5rem;
+    margin-top: 25rem;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  body {
+    display: grid;
+  }
+  .p-content {
+    margin-right: 23rem;
+  }
+  .p-content-2 {
+    margin-right: 23rem;
+  }
+  .p-content-3 {
+    margin-right: 23rem;
+  }
+  .section-4 img {
+    width: 45rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .main-header {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .main-header .header-h2 {
+    font-size: 0.7rem;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+}
+
+@media screen and (min-width: 280px) and (max-width: 720px) {
+  nav {
+    width: 45rem;
+  }
+
+  .section-1 .p-content {
+    width: 20rem;
+  }
+  .p-content .p-1 {
+    width: 35rem;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .p-content .p-2 {
+    font-size: 2rem;
+    width: 37rem;
+  }
+
+  .section-2 .p-content-2 {
+    width: 20rem;
+    margin-bottom: 2rem;
+  }
+
+  .p-content-2 .p-sec {
+    margin-bottom: 2rem;
+    width: 35rem;
+    font-size: 2.5rem;
+  }
+  .p-content-2 .p-sec2 {
+    font-size: 2rem;
+    width: 37rem;
+  }
+
+  .section-3 .p-content-3 {
+    width: 20rem;
+  }
+
+  .p-content-3 .p-sect {
+    margin-bottom: 2rem;
+    width: 40rem;
+    font-size: 2.5rem;
+  }
+  .p-content-3 .p-sect2 {
+    font-size: 2rem;
+    width: 37rem;
+  }
+
+  .section-4 .sec4-text {
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+    font-size: 3rem;
+  }
+  .section-4 .sec4-p {
+    text-align: left;
+    margin-left: 2rem;
+    width: 40rem;
+    font-size: 2rem;
+  }
+  .section-1 .p-content {
+    margin-left: 2rem;
+  }
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 3rem;
+  }
+  .footer-container h1 {
+    font-size: 4rem;
+    max-width: 30rem;
+  }
+  .footer-column1 img {
+    max-width: 3rem;
+  }
+  #yt {
+    max-width: 4rem;
+    top: 0.6rem;
+  }
+  .footer-container .footer-columns {
+    font-size: 2rem;
+  }
+}
